@@ -1,0 +1,293 @@
+header {
+    min-height: 3.2em;
+    margin: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h1::before {
+    content: none
+}
+
+header h2 {
+    margin: 0 0 8px 0;
+    margin-block-start: -8px;
+}
+
+h1 { margin-right: 0.5em; }
+
+pre {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 180, 0, 0.5);
+}
+
+section {
+    margin: 0 0 0.5em 0;
+}
+
+ul li {
+    list-style-image: url("../images/marker.png");
+}
+
+a {
+    color: #63c0f5;
+    text-shadow:0 0 5px rgba(255,255,255,0.3);
+}
+
+a:hover {
+    text-shadow:0 0 5px currentColor
+}
+
+a:visited {
+    color: #ff00cc;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+a img {
+    display: inline-block;
+    margin: 0;
+}
+
+table {
+    border: 1px solid #b5e853;
+    border-collapse: collapse;
+}
+
+th, td {
+    border-left: 1px solid #b5e853;
+}
+
+thead, tr:nth-child(2n) {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+footer {    
+    border-top: 1px dashed #b5e853;
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.ontop {
+    z-index: 2;
+    position: absolute;
+    top: 0.8em;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;  
+}
+
+.align-on-edge {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.align-on-edge div {
+    display: block;
+}
+
+.align-on-edge t { color: #b5e853; }
+
+#top.align-on-edge {
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+
+#top.align-on-edge #github_btns {
+    margin-top: 4px;
+}
+
+#top.align-on-edge h4 {
+    margin: 3px 0 20px 8px;
+}
+
+#bottom.align-on-edge {
+    flex-wrap: wrap-reverse;
+    margin-bottom: 0.5em;
+}
+
+#bottom.align-on-edge h4 {
+    margin: 8px 0 20px 8px;
+}
+
+.btn-green {
+    background: rgba(0,180,0,0.2);
+    border: 1px solid rgba(0, 180, 0, 0.5);
+    border-radius: 0;
+    padding: 6px 8px;
+    text-shadow: none;
+}
+
+.btn-green:hover {
+    background: rgba(0,180,0,0.5);
+    border: 1px solid rgba(0, 180, 0);
+}:visited
+
+.btn-green:hover, .btn-green:visited {
+    color:rgba(255,255,255,0.8);
+}
+
+.btn-green:hover {
+    text-shadow:none;
+}
+
+.image-gallery {overflow: auto; margin-left: -1%!important; padding-left: 0; text-align: center;}
+.image-gallery li {float: none; display: inline-block; margin: 0 0 1% 1%;}
+.image-gallery li a {text-align: center; text-decoration: none!important; color: #777; text-shadow: none; }
+.image-gallery li a span {display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 3px 0;}
+.image-gallery li a img {width: 100%; display: block;}
+
+.one {max-width: 100%;}
+.two {max-width: 48.2%;}
+.three {max-width: 31.3%;}
+.four {max-width: 22.8%;}
+.five {max-width: 17.8%;}
+
+
+.project-preview ul, .post-preview ul { padding: 0; }
+.project-preview li, .post-preview li { position: relative; display: block; margin: 2em 0; }
+.project-preview a, .post-preview a { text-decoration: none; color: #eaeaea; text-shadow: none; }
+.project-preview img, .post-preview img { position: absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:100%; object-fit:cover; }
+.project-preview h5, .post-preview h5 { position: absolute; right: 0.6em; bottom: 0; }
+.project-preview .left { flex-shrink: 0; position: relative; overflow:hidden; width:30%; height:200px; 
+    background: url(/assets/images/img-ph.png) no-repeat; background-position: center; }
+.project-preview .right { flex-shrink: 1; padding: 1em; }
+
+
+.post-preview .align-on-edge { display: block; }
+.post-preview .preview { position: relative; overflow:hidden; width: 100%; height:320px; 
+    background: url(/assets/images/img-ph.png) no-repeat; background-position: center; }
+.post-preview .description { padding: 1em 1em 1.4em 1em; }
+.post-preview h2 { margin-bottom: 0.4em; }
+
+.projects-near, .posts-near { display: flex; flex-wrap: wrap-reverse; flex-direction: row; justify-content: space-around; margin-bottom: 0.5em; }
+.projects-near a, .posts-near a { margin: 0.5em 0;}
+.projects-near #previous, .posts-near { margin-right: 32px; }
+.projects-near #next, .posts-near #previous { margin-left: 32px; }
+.projects-near #previous::before, .posts-near #previous::before { content: url("../images/left.png"); margin: 4px; }
+.projects-near #next::after, .posts-near #next::after { content: url("../images/right.png"); margin: 4px; }
+
+#a-title {
+    display: inline-block;
+}
+
+#main_content {
+    margin-top: 1em;
+    min-height: calc(100vh - 11.5em);
+}
+
+#main-menu.ontop {
+    position: absolute;
+    width: 90%;   
+}
+
+#main-menu.ontop section {
+    position: absolute;
+    right: 0;
+}
+
+#En.btn-green, #Ru.btn-green {
+    position: absolute;
+    right: 48.5%;    
+    margin: 0;
+    padding: 0;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+#En {
+    background-image: url(../images/icon-en.png)
+}
+
+#Ru {
+    background-image: url(../images/icon-ru.png)
+}
+
+#github_btns .btn {
+    color:rgba(255,255,255,0.8);
+}
+
+#github_btns .btn:hover, #upbutton.btn:hover {
+    color: #63c0f5;
+}
+
+img#preview { margin: 2em 0 1em 0; width:100%; height: 320px; object-fit:cover; }
+
+#social a {
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+#upbutton.btn {
+    height: 24px;
+    width: 20px;
+    bottom: 1em;
+    right: 1em;
+    border-radius: 50%;
+    font-size: 1.3em;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding: 6px 8px;
+    text-align: center;
+}
+@media (max-width: 460px) {
+    #bottom.align-on-edge .right { width: 100%; text-align: right; }
+}
+@media (max-width: 740px) {
+    header {
+        padding-bottom: 8px;
+    }
+
+    .two, .three, .four, .five { max-width: 100%;}
+
+    .project-preview .align-on-edge { display: block; }
+    .project-preview .left { width: 100%; }
+    .project-preview .right { padding-bottom: 1.4em; }
+    .project-preview h2 { margin-bottom: 0.4em; }
+
+    #top.align-on-edge h1 {
+        margin-bottom: 8px;
+    }
+
+    #main_content {
+        min-height: calc(100vh - 14.5em);
+    }
+   
+    #main-menu.ontop {
+        position: static;
+        width: 100%;
+    }
+
+    #main-menu.ontop section {
+        position: static;
+        right: auto;
+        display: flex;
+        justify-content: center; 
+        text-align: center;
+    }
+
+    #main-menu a {
+        flex-grow: 1;
+    }
+
+    #main-menu a:not(:last-child) {
+        margin: 0 0.8em 0 0;
+    }
+
+    #En.btn-green, #Ru.btn-green {
+        right: 0;
+    }
+}

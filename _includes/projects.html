@@ -1,0 +1,26 @@
+<div class="project-preview">
+    {% assign projects = include.projects | where: "lang", page.lang | sort: 'date' | reverse %}
+    <ul>
+    {% for project in projects %}
+        <li>
+            <a href="{{ project.url }}">
+                <img src="/assets/images/fade.png" alt=" " title="{{ project.title }}" style="height: 100%"/>
+            </a>
+            <div class="align-on-edge">
+                <div class="left">
+                    <a href="{{ project.url }}">
+                        <img src="{{ project.preview | relative_url }}" alt=" " title="{{ project.title }}"/>
+                    </a>
+                </div>
+                <div class="right">            
+                    <a href="{{ project.url }}">
+                        <h2>{{ project.title }}</h2>
+                        {{ project.excerpt }}...
+                        <h5>{{ project.date | date: "%d.%m.%Y" }}</h5>
+                    </a>
+                </div>
+            </div>           
+        </li>
+    {% endfor %}
+    </ul>
+</div>

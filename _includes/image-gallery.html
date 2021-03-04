@@ -1,0 +1,10 @@
+<ul class="image-gallery">
+    {% for image in include.collection %}
+        <li class="{{ include.number }}">
+            <a href="{{ image.path | relative_url }}" title="{{ image.title }}">
+                <img src="{{ image.path | relative_url }}" alt="{{ image.title }}" title="{{ image.title }}" />
+                <span>{{ image.title }}</span>
+            </a>
+        </li>
+    {% endfor %}
+</ul>

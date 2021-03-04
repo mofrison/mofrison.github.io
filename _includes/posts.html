@@ -1,0 +1,24 @@
+<div class="post-preview">
+    {% assign posts = include.posts | where: "lang", page.lang | sort: 'date' | reverse %}
+    <ul>
+    {% for post in posts %}
+        <li>
+            <a href="{{ post.url }}">
+                <img src="/assets/images/fade.png" alt=" " title="{{ post.title }}" style="height: 100%"/>
+            </a>
+                <div class="preview">
+                    <a href="{{ post.url }}">
+                        <img src="{{ post.preview }}" alt=" " title="{{ post.title }}"/>
+                    </a>
+                </div>
+                <div class="description">            
+                    <a href="{{ post.url }}">
+                        <h2>{{ post.title }}</h2>
+                        {{ post.excerpt }}
+                        <h5>{{ post.date | date: "%d.%m.%Y" }}</h5>
+                    </a>
+            </div>           
+        </li>
+    {% endfor %}
+    </ul>
+</div>

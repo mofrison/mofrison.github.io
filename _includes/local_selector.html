@@ -1,0 +1,7 @@
+<div class="ontop">
+    {% case page.lang %} 
+        {% when 'Ru' %} {% assign lang = 'En' %} {% assign link = page.url | replace: '/ru' %}
+        {% else %} {% assign lang = 'Ru' %} {% capture link %}/{{ lang | downcase }}{{ page.url }}{% endcapture %}
+    {% endcase %}
+    <a href="{{ link }}" alt="{{ lang }}" title="{{ lang }}" id="{{ lang }}" class="btn btn-green"></a>
+</div>

@@ -1,0 +1,8 @@
+<div id="main-menu" class="ontop">
+    <section>
+        {% assign sorted_pages = include.pages | where: "category", 'main-menu' | where: "lang", page.lang | sort: 'position' %}
+            {% for el in sorted_pages %}
+                <a href="{{ el.url }}" class="btn btn-green">{{ el.title }}</a>
+            {% endfor %}
+    </section>
+</div>

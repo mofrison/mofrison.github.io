@@ -1,0 +1,17 @@
+title: mofrison
+google_analytics:
+theme: jekyll-theme-hacker
+
+collections:
+    pages:
+        output: true
+        permalink: /:path
+    posts:
+        output: true
+        permalink: /:categories/:title
+    projects:
+        output: true
+        permalink: /:categories/:title
+    mytags:
+        output: true
+        permalink: /:path

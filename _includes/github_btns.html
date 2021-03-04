@@ -1,0 +1,6 @@
+{% if include.repository %}
+    <section id="github_btns">
+        <a href="https://github.com/{{ site.github.owner_name }}/{{ include.repository }}" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        <a href="https://github.com/{{ site.github.owner_name }}/{{ include.repository }}/archive/master.zip" class="btn">Download as .zip</a>
+    </section>
+{% endif %}
