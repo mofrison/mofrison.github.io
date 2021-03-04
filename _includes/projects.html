@@ -1,5 +1,5 @@
 <div class="project-preview">
-    {% assign projects = include.projects | where: "lang", page.lang | sort: 'date' | reverse %}
+    {% assign projects = include.projects | where: "categories", include.category | where: "lang", page.lang | sort: 'date' | reverse %}
     <ul>
     {% for project in projects %}
         <li>
