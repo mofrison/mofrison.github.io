@@ -162,7 +162,7 @@ footer {
 .project-preview .left { flex-shrink: 0; position: relative; overflow:hidden; width:30%; height:200px; 
     background: url(/assets/images/img-ph.png) no-repeat; background-position: center; }
 .project-preview .right { flex-shrink: 1; padding: 1em; }
-
+.project-preview .left img { min-height:180px}
 
 .post-preview .align-on-edge { display: block; }
 .post-preview .preview { position: relative; overflow:hidden; width: 100%; height:320px; 
@@ -170,12 +170,12 @@ footer {
 .post-preview .description { padding: 1em 1em 1.4em 1em; }
 .post-preview h2 { margin-bottom: 0.4em; }
 
-.projects-near, .posts-near { display: flex; flex-wrap: wrap-reverse; flex-direction: row; justify-content: space-around; margin-bottom: 0.5em; }
-.projects-near a, .posts-near a { margin: 0.5em 0;}
-.projects-near #previous, .posts-near { margin-right: 32px; }
-.projects-near #next, .posts-near #previous { margin-left: 32px; }
-.projects-near #previous::before, .posts-near #previous::before { content: url("../images/left.png"); margin: 4px; }
-.projects-near #next::after, .posts-near #next::after { content: url("../images/right.png"); margin: 4px; }
+.posts-near { display: flex; flex-wrap: wrap-reverse; flex-direction: row; justify-content: space-around; margin-bottom: 0.5em; }
+.posts-near a { margin: 0.5em 0;}
+.posts-near { margin-right: 32px; }
+.posts-near #previous { margin-left: 32px; }
+.posts-near #previous::before { content: url("../images/left.png"); margin: 4px; }
+.posts-near #next::after { content: url("../images/right.png"); margin: 4px; }
 
 #a-title {
     display: inline-block;
