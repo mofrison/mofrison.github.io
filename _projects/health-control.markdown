@@ -6,8 +6,8 @@ excerpt: The Health Control app is designed to monitor your health status accord
 date: 18-01-2018
 categories: studies-projects
 tags: [java, android]
-lang: En
 layout: project
+lang: En
 
 home-screen:
   - path: ./assets/images/projects/health-control/list.jpg

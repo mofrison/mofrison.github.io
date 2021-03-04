@@ -6,8 +6,8 @@ excerpt: Приложение Health Control разработано для то�
 date: 18-01-2018
 categories: ru studies-projects
 tags: [java, android]
-lang: Ru
 layout: project
+lang: Ru
 
 home-screen:
   - path: ./assets/images/projects/health-control/list.jpg

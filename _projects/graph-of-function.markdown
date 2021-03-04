@@ -6,8 +6,8 @@ excerpt: The program accepts data from the user, calculates the values of the fo
 date: 2017-01-26
 categories: studies-projects
 tags: [c++]
-lang: En
 layout: project
+lang: En
 ---
 
 ## 1. Purpose of the program

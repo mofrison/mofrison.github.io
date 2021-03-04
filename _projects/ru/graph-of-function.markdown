@@ -6,8 +6,8 @@ excerpt: Программа принимает данные от пользов�
 date: 2017-01-26
 categories: ru studies-projects
 tags: [c++]
-lang: Ru
 layout: project
+lang: Ru
 ---
 
 ## 1. Назначение программы
