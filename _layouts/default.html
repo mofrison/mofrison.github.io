@@ -14,7 +14,7 @@
   <body>
     <header>
         <div class="container">
-            <a id="a-title" href="{{ '/' | relative_url }}{{ page.lang | downcase }}">
+            <a id="a-title" href="{{ '/' | relative_url }}{% if page.lang != 'En' %}{{ page.lang | downcase }}{% endif %}">
                 <h1>{{ site.title | default: site.github.owner_name }}</h1>
             </a>
 

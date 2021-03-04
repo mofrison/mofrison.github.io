@@ -2,6 +2,7 @@
 layout: default
 category: main-menu
 position: 1
+lang: En
 ---
 
 ## My studies projects

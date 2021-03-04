@@ -1,5 +1,4 @@
 ---
-lang: ru
+lang: Ru
 layout: tagpage
-tag: java
 ---

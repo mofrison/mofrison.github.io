@@ -1,5 +1,4 @@
 ---
-lang: en
+lang: En
 layout: tagpage
-tag: news
 ---

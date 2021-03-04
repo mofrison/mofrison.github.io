@@ -4,6 +4,7 @@ preview: /assets/images/posts/2020-12-26-welcome-to-my-site/hello-world.gif
 date:   2020-12-26 16:33:19 +0300
 categories: news
 tags: [news]
+lang: En
 layout: post
 ---
 
