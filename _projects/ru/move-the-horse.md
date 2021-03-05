@@ -4,10 +4,10 @@ repository: move-the-horse
 preview: ./assets/images/projects/move-the-horse/Greeting.jpg
 excerpt: Это учебная программа позволяет смоделировать движение шахматной фигуры «Конь» по полю размером 8x8. Дополнительным условием является то, что «Конь» должен побывать в каждой ячейке только один раз
 date: 14-06-2016
-categories: ru studies-projects
-tags: [c++]
+categories: ru projects
+tags: [c++, studies]
 layout: project
-lang: En
+lang: Ru
 ---
 
 ## 1. Назначение программы

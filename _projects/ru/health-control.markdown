@@ -4,8 +4,8 @@ repository: health-control
 preview: ./assets/images/projects/health-control/preview.jpg
 excerpt: Приложение Health Control разработано для того, чтобы следить за состоянием своего здоровья по основным жизненно-важным показателям. Таким как систолическое и диастолическое артериальное давление, пульс, температура и показатели содержания сахара в крови
 date: 18-01-2018
-categories: ru studies-projects
-tags: [java, android]
+categories: ru projects
+tags: [java, android, studies]
 layout: project
 lang: Ru
 

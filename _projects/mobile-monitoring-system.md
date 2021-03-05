@@ -4,8 +4,8 @@ repository: mobile-monitoring-system
 preview: ./assets/images/projects/mobile-monitoring-system/preview.png
 excerpt:  Identification of sensors during the crawl, receiving information from the Control center about the values of their readings, visualizing the readings from the sensor on the screen of a mobile device, sending a message to the Control center that the object was examined
 date: 27-06-2019
-categories: studies-projects
-tags: [java, android]
+categories: projects
+tags: [java, android, studies]
 layout: project
 lang: En
 

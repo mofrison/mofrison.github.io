@@ -4,8 +4,8 @@ repository: my-ocr
 preview: ./assets/images/projects/my-ocr/segmentation.jpg
 excerpt: This program allows you to recognize text characters that are on a bitmap image. The purpose of this work is to study machine vision based on the filters of the theory of active image perception
 date: 22-05-2017
-categories: studies-projects
-tags: [c++]
+categories: projects
+tags: [c++, studies]
 layout: project
 lang: En
 ---

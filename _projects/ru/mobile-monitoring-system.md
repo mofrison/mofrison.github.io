@@ -4,8 +4,8 @@ repository: mobile-monitoring-system
 preview: ./assets/images/projects/mobile-monitoring-system/preview.png
 excerpt: Идентификация датчиков во время совершения обхода, получение информации с Центрального поста о значениях их показаний, визуализация показаний с датчика на экране мобильного устройства, отправка сообщения на Центральный пост о том, что объект был осмотрен
 date: 27-06-2019
-categories: ru studies-projects
-tags: [java, android]
+categories: ru projects
+tags: [java, android, studies]
 date: 27.06.2019
 layout: project
 lang: Ru
