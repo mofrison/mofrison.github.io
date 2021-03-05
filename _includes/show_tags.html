@@ -12,7 +12,7 @@
         {% for tag in page.tags %}
             <em>
             {% if tags contains tag %}
-                {% capture url %}/tag/{{ tag }}{% endcapture %}
+                {% capture url %}/tags/{{ tag }}{% endcapture %}
                 <a href="{{ url }}">{{ tag }}</a>
             {% else %}
                 {{ tag }}
