@@ -6,12 +6,17 @@ layout: default
 
 {{content}}
 
+{% assign projects = site.projects | where: "lang", page.lang | where: "tags", page.slug %}
+{% assign posts = site.tags[page.slug] | where: "lang", page.lang %}
+
+{% assign items = projects | concat: posts | uniq | sort: 'date' | reverse %}
+
 <ul>
-{% for post in site.tags[page.slug] %}
-  {% if post.lang == page.lang %}
+{% for item in items %}
     <li>
-        {{ post.date | date: "%d.%m.%Y" }}: <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ item.date | date: "%d.%m.%Y" }}: <a href="{{ item.url }}">{{ item.title }}</a>
     </li>
-  {% endif %}
+
 {% endfor %}
 </ul>
+

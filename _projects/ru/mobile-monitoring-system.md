@@ -158,21 +158,23 @@ UI                  | Реализация пользовательского и
 
 ### 4.1. Установка MQTT-сервера
 Для организации передачи сообщений по сети необходимо установить _Mosquitto_ – это популярный **MQTT**-сервер (или брокер). Он прост в установке и настройке и активно поддерживается сообществом разработчиков.
-Устанавливаем сервер и клиент с помощью консольных команд:
+Устанавливаем _Mosquitto_ с помощью консольной команды:
 
-    sudo apt-get install mosquitto
     sudo apt-get install mosquitto-clients
 
-По умолчанию сервис Mosquitto запускается сразу после установки. 
+По умолчанию сервис _Mosquitto_ запускается сразу после установки. 
 Для настройки пароля в консоль вводим:
 
-    sudo mosquitto_passwd -c /etc/mosquitto/passwd majordomo
-    sudo nano /etc/mosquitto/conf.d/default.conf
+    sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>
+
+Открываем файл конфигурации:
+
+    sudo nano /etc/mosquitto/mosquitto.conf
 
 В открывшемся файле необходимо указать путь к файлу с именем пользователя и хэшем пароля:
 
-    sudo mosquitto_passwd -c /etc/mosquitto/passwd majordomo
-    sudo nano /etc/mosquitto/conf.d/default.conf
+    allow_anonymous false
+    password_file /etc/mosquitto/mosquitto.pwd
 
 После сохранения файла, нужно перезапустить сервер:
 

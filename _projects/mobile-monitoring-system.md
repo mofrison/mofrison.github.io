@@ -156,21 +156,23 @@ To check the health of the application, you will need:
 
 ### 4.1. Installing the MQTT Server
 To organize the transmission of messages over the network, you need to install _Mosquitto_ – this is a popular **MQTT** server (or broker). It is easy to install and configure and is actively supported by the developer community.
-Installing the server and client using console commands:
+Installing the _Mosquitto_ using the console command:
 
-    sudo apt-get install mosquitto
     sudo apt-get install mosquitto-clients
 
 By default, the Mosquito service starts immediately after installation.
 To set up a password in the console, enter:
 
-    sudo mosquitto_passwd -c /etc/mosquitto/passwd majordomo
-    sudo nano /etc/mosquitto/conf.d/default.conf
+    sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>
+
+Opening the configuration file:
+
+    sudo nano /etc/mosquitto/mosquitto.conf
 
 In the file that opens, you must specify the path to the file with the user name and password hash:
 
-    sudo mosquitto_passwd -c /etc/mosquitto/passwd majordomo
-    sudo nano /etc/mosquitto/conf.d/default.conf
+    allow_anonymous false
+    password_file /etc/mosquitto/mosquitto.pwd
 
 After saving the file, you need to restart the server:
 

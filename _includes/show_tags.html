@@ -1,19 +1,10 @@
-{% assign nuber = page.tags | size %}
-{% if nuber > 0 %}
-    {% capture tags %}
-        {% for tag in site.mytags %}
-            {% if tag.lang == page.lang %}
-                {{ tag.slug }}
-            {% endif %}
-        {% endfor %}
-{% endcapture %}
-
+{% if page.tags[0] %}
     <small> <t>tags:</t>
         {% for tag in page.tags %}
+            {% assign sitetags = site.mytags | where: "lang", page.lang | where: "slug", tag %}
             <em>
-            {% if tags contains tag %}
-                {% capture url %}/tags/{{ tag }}{% endcapture %}
-                <a href="{{ url }}">{{ tag }}</a>
+            {% if sitetags[0] %}
+                <a href="{{ sitetags[0].url }}">{{ tag }}</a>
             {% else %}
                 {{ tag }}
             {% endif %}

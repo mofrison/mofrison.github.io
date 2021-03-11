@@ -5,6 +5,8 @@ header {
     padding-bottom: 0;
 }
 
+h1, h2, h3, h4, h5, h6 { margin: 24px 0 18px 0; }
+
 header h1 {
     margin: 0;
 }
@@ -103,8 +105,8 @@ footer {
     margin-top: 1em;
 }
 
-#top.align-on-edge #github_btns {
-    margin-top: 4px;
+#github_btns {
+    margin-top: 24px;
 }
 
 #top.align-on-edge h4 {
@@ -290,4 +292,6 @@ img#preview { margin: 2em 0 1em 0; width:100%; height: 320px; object-fit:cover; 
     #En.btn-green, #Ru.btn-green {
         right: 0;
     }
+
+    #github_btns { margin-top: 0px; }
 }
