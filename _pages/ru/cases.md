@@ -6,8 +6,5 @@ position: 2
 lang: Ru
 ---
 
-## Добро пожаловать
-
-_yay_
-
-[Назад](./)
+{% assign cases = site.posts | where: "categories", 'cases' %}
+{% include projects.html projects = cases %}

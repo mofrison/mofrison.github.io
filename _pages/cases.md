@@ -5,8 +5,5 @@ position: 2
 lang: En
 ---
 
-## Welcome to another page
-
-_yay_
-
-[back](./)
+{% assign cases = site.posts | where: "categories", 'cases' %}
+{% include projects.html projects = cases %}

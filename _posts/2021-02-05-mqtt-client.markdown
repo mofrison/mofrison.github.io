@@ -1,5 +1,5 @@
 ---
-title:  "MQTT-client"
+title:  MQTT-client for Android
 repository: mqtt-client
 preview: /assets/images/posts/2021-02-05-mqtt-client/mqtt.jpg
 date:   2021-02-05 10:00:00 +0300

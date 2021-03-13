@@ -145,7 +145,42 @@ The third table reads also contains the id field(primary key), and three fields:
 * _value_ — stores the value received from the server
 * _time_ — contains the time value since the last update of the value
 
-## 4. Server
+## 4 Realization
+
+## 4.1 Mqtt client
+I used the PahoM QT client and the Android service provided by Eclipse.
+How to add it to the project and how to interact with it is viewed in the article [MQTT-client for Android]({{site. url}}/cases/mqtt-client).
+
+### 4.2 Graphical user interface
+Four functions are expected for direct user interaction: authentication, setting up a connection to the server, identifying sensors and visualizing their readings. Based on this, the navigation map of the application was compiled:
+
+![Pic.9. Navigation map](/assets/images/projects/mobile-monitoring-system/navigation-map.png "Pic.9. Navigation map")
+
+The authentication screen contains text fields for entering the user name and password, which are used to authenticate the user in the system, the _«Sign in»_ button, which attempts to connect to the server, and a virtual keyboard for entering values in the text fields. Also in the top menu there is a button to go to the settings screen, designed in the form of a gear icon.
+If after clicking on the _«Sign in»_ button, the connection to the server is not established, an error message will be displayed on the screen with a suggestion to check the connection settings. To set up the connection, click on the gear icon in the corner of the screen. This will take you to the settings screen.
+
+There are also two text fields on the settings screen:
+* A field for entering the URL.
+* Field for entering the port number.
+
+The virtual keyboard depends on the active text field. If the URL field is active, a full keyboard with basic alphanumeric elements is displayed. If the port number field is active, only the numeric keypad is displayed.
+The following items are activated in the top menu:
+* _«Back arrow»_ — implements a return to the previous screen.
+* _«Lighting»_ — activates the backlight using the camera (if supported by the device).
+* _«Autofocus»_ — activates the camera's autofocus mode (if supported by the device).
+* _«Save»_ — saves the entered settings.
+
+The main screen of the app combines a sensor identification area and a list.
+To identify the sensor, an image from the camera is used, which the user directs to the _QR-code_. The list of identified sensors is displayed below, in reverse order of the identification time. Each item in the list contains the name of the sensor and its readings.
+
+At the bottom of the screen there is a horizontal menu, which consists of the following items:
+* _«Relogin»_ - go to the authentication screen
+* _«Settings»_ - go to the settings screen
+* _«Clear all»_ - delete all records and disable requests
+
+In addition, special movements allow you to adjust the zoom on the camera, and a long press on the list item opens the context menu, through which you can delete this item.
+
+## 5. Testing
 
 To check the health of the application, you will need:
 * A computer with the ability to connect to a network and a network OS;
@@ -154,7 +189,7 @@ To check the health of the application, you will need:
 * Script for modeling the generation of sensor readings;
 * QR codes with sensor names encrypted in them.
 
-### 4.1. Installing the MQTT Server
+### 5.1. Installing the MQTT Server
 To organize the transmission of messages over the network, you need to install _Mosquitto_ – this is a popular **MQTT** server (or broker). It is easy to install and configure and is actively supported by the developer community.
 Installing the _Mosquitto_ using the console command:
 
@@ -178,7 +213,7 @@ After saving the file, you need to restart the server:
 
     sudo systemctl restart mosquitto
 
-### 4.2. Script for generating test values
+### 5.2. Script for generating test values
 To simulate the system operation, a script was written in the **bash** language. In an infinite loop, the script generates random values and sends them to the server using the `mosquito_pub` command, which redirects these messages to clients who have subscribed to the corresponding topics.
 ```bash
 #!/bin/bash
@@ -220,37 +255,8 @@ do
     mosquitto_pub -h $ip -t "Company/Assembly-line/speed" -m $number -u "8host" -P "1234"
 done
 ```
-### 4.3. QR-codes
+### 5.3. QR-codes
 To check the functionality, the corresponding QR-codes were generated:
 {% include image-gallery.html collection = page.QR-codes number = "four" %}
-
-## 5. Graphical user interface
-Four functions are expected for direct user interaction: authentication, setting up a connection to the server, identifying sensors and visualizing their readings. Based on this, the navigation map of the application was compiled:
-
-![Pic.9. Navigation map](/assets/images/projects/mobile-monitoring-system/navigation-map.png "Pic.9. Navigation map")
-
-The authentication screen contains text fields for entering the user name and password, which are used to authenticate the user in the system, the _«Sign in»_ button, which attempts to connect to the server, and a virtual keyboard for entering values in the text fields. Also in the top menu there is a button to go to the settings screen, designed in the form of a gear icon.
-If after clicking on the _«Sign in»_ button, the connection to the server is not established, an error message will be displayed on the screen with a suggestion to check the connection settings. To set up the connection, click on the gear icon in the corner of the screen. This will take you to the settings screen.
-
-There are also two text fields on the settings screen:
-* A field for entering the URL.
-* Field for entering the port number.
-
-The virtual keyboard depends on the active text field. If the URL field is active, a full keyboard with basic alphanumeric elements is displayed. If the port number field is active, only the numeric keypad is displayed.
-The following items are activated in the top menu:
-* _«Back arrow»_ — implements a return to the previous screen.
-* _«Lighting»_ — activates the backlight using the camera (if supported by the device).
-* _«Autofocus»_ — activates the camera's autofocus mode (if supported by the device).
-* _«Save»_ — saves the entered settings.
-
-The main screen of the app combines a sensor identification area and a list.
-To identify the sensor, an image from the camera is used, which the user directs to the _QR-code_. The list of identified sensors is displayed below, in reverse order of the identification time. Each item in the list contains the name of the sensor and its readings.
-
-At the bottom of the screen there is a horizontal menu, which consists of the following items:
-* _«Relogin»_ - go to the authentication screen
-* _«Settings»_ - go to the settings screen
-* _«Clear all»_ - delete all records and disable requests
-
-In addition, special movements allow you to adjust the zoom on the camera, and a long press on the list item opens the context menu, through which you can delete this item.
 
 _Thank you for your interest! :)_

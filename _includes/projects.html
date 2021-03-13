@@ -1,5 +1,5 @@
 <div class="project-preview">
-    {% assign projects = include.projects | where: "tags", include.tag | where: "lang", page.lang | sort: 'date' | reverse %}
+    {% assign projects = include.projects | where: "lang", page.lang | sort: 'date' | reverse %}
     <ul>
     {% for project in projects %}
         <li>
@@ -15,7 +15,7 @@
                 <div class="right">            
                     <a href="{{ project.url }}">
                         <h2>{{ project.title }}</h2>
-                        {{ project.excerpt }}...
+                        {{ project.excerpt }}
                         <h5>{{ project.date | date: "%d.%m.%Y" }}</h5>
                     </a>
                 </div>
