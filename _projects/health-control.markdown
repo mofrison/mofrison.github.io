@@ -2,7 +2,7 @@
 title:  "Health control"
 repository: health-control
 preview: ./assets/images/projects/health-control/preview.jpg
-excerpt: The Health Control app is designed to monitor your health status according to the main vital indicators. Such as systolic and diastolic blood pressure, pulse, temperature, and blood sugar levels
+excerpt: The Health Control app is designed to monitor your health status according to the main vital indicators. Such as systolic and diastolic blood pressure, pulse, temperature, and blood sugar levels...
 date: 18-01-2018
 categories: projects
 tags: [java, android, studies]
