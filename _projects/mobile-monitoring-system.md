@@ -147,9 +147,11 @@ The third table reads also contains the id field(primary key), and three fields:
 
 ## 4 Realization
 
-## 4.1 Mqtt client
-I used the PahoM QT client and the Android service provided by Eclipse.
-How to add it to the project and how to interact with it is viewed in the article [MQTT-client for Android]({{site. url}}/cases/mqtt-client).
+### 4.1 MQTT client
+**MQTT** or **Message Queue Telemetry Transport** is a lightweight, compact and open data exchange protocol designed to transfer data to remote locations where a small code size is required and there are limitations on channel bandwidth. The above advantages allow it to be used in **M2M** (Machine-to-Machine Interaction) and **IIoT** (Industrial Internet of Things) systems.
+
+To create the **MQTT** client in my app, I used **Paho MQTT** and **Android** service, provided by Eclipse.
+How to add it to the project and how to interact with it is viewed in the [MQTT-client for Android]({{site. url}}/cases/mqtt-client).
 
 ### 4.2 Graphical user interface
 Four functions are expected for direct user interaction: authentication, setting up a connection to the server, identifying sensors and visualizing their readings. Based on this, the navigation map of the application was compiled:
