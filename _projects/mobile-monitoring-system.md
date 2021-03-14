@@ -63,7 +63,7 @@ Mobile phone-a smartphone with support for network data transmission Wi-fi, Blue
 ### 2.5. Network protocol for transmitting data to the device
 Devices use various industrial protocols to communicate with each other, and MQTT is one of the most popular protocols for this purpose. MQTT or Message Queue Telemetry Transport is a lightweight, compact, and open data exchange protocol designed to transfer data to remote locations where a small code size is required and there are bandwidth limitations. The above advantages allow it to be used in M2M (Machine-to-Machine Interaction) and IIoT (Industrial Internet of Things) systems.
 
-## 3. System design
+## 3. Realization
 
 Based on the analysis of the requirements for the system, its structural diagram was compiled:
 
@@ -92,7 +92,13 @@ UI                  | Implementation of the user interface
 
 ![Pic.3. Class diagram](/assets/images/projects/mobile-monitoring-system/class-diagram.jpg "Pic.3. Class diagram")
 
-### 3.3. Storage of information
+### 3.3 MQTT client
+**MQTT** or **Message Queue Telemetry Transport** is a lightweight, compact and open data exchange protocol designed to transfer data to remote locations where a small code size is required and there are limitations on channel bandwidth. The above advantages allow it to be used in **M2M** (Machine-to-Machine Interaction) and **IIoT** (Industrial Internet of Things) systems.
+
+To create the **MQTT** client in my app, I used **Paho MQTT** and **Android** service, provided by Eclipse.
+How to add it to the project and how to interact with it is viewed in the [MQTT-client for Android]({{site. url}}/cases/mqtt-client).
+
+### 3.4. Storage of information
 The information stored in the app is divided into two groups:
 * Camera settings(backlight, autofocus) and connection settings
 * Sensor readings
@@ -145,15 +151,7 @@ The third table reads also contains the id field(primary key), and three fields:
 * _value_ — stores the value received from the server
 * _time_ — contains the time value since the last update of the value
 
-## 4 Realization
-
-### 4.1 MQTT client
-**MQTT** or **Message Queue Telemetry Transport** is a lightweight, compact and open data exchange protocol designed to transfer data to remote locations where a small code size is required and there are limitations on channel bandwidth. The above advantages allow it to be used in **M2M** (Machine-to-Machine Interaction) and **IIoT** (Industrial Internet of Things) systems.
-
-To create the **MQTT** client in my app, I used **Paho MQTT** and **Android** service, provided by Eclipse.
-How to add it to the project and how to interact with it is viewed in the [MQTT-client for Android]({{site. url}}/cases/mqtt-client).
-
-### 4.2 Graphical user interface
+### 3.5 Graphical user interface
 Four functions are expected for direct user interaction: authentication, setting up a connection to the server, identifying sensors and visualizing their readings. Based on this, the navigation map of the application was compiled:
 
 ![Pic.9. Navigation map](/assets/images/projects/mobile-monitoring-system/navigation-map.png "Pic.9. Navigation map")
@@ -182,7 +180,7 @@ At the bottom of the screen there is a horizontal menu, which consists of the fo
 
 In addition, special movements allow you to adjust the zoom on the camera, and a long press on the list item opens the context menu, through which you can delete this item.
 
-## 5. Testing
+## 4. Testing
 
 To check the health of the application, you will need:
 * A computer with the ability to connect to a network and a network OS;
@@ -191,7 +189,7 @@ To check the health of the application, you will need:
 * Script for modeling the generation of sensor readings;
 * QR codes with sensor names encrypted in them.
 
-### 5.1. Installing the MQTT Server
+### 4.1. Installing the MQTT Server
 To organize the transmission of messages over the network, you need to install _Mosquitto_ – this is a popular **MQTT** server (or broker). It is easy to install and configure and is actively supported by the developer community.
 Installing the _Mosquitto_ using the console command:
 
@@ -215,7 +213,7 @@ After saving the file, you need to restart the server:
 
     sudo systemctl restart mosquitto
 
-### 5.2. Script for generating test values
+### 4.2. Script for generating test values
 To simulate the system operation, a script was written in the **bash** language. In an infinite loop, the script generates random values and sends them to the server using the `mosquito_pub` command, which redirects these messages to clients who have subscribed to the corresponding topics.
 ```bash
 #!/bin/bash
@@ -257,7 +255,7 @@ do
     mosquitto_pub -h $ip -t "Company/Assembly-line/speed" -m $number -u "8host" -P "1234"
 done
 ```
-### 5.3. QR-codes
+### 4.3. QR-codes
 To check the functionality, the corresponding QR-codes were generated:
 {% include image-gallery.html collection = page.QR-codes number = "four" %}
 
