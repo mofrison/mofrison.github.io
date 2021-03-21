@@ -58,6 +58,8 @@ a img {
     margin: 0;
 }
 
+blockquote { border-left-color: #f90; background-color: rgba(0, 0, 0, 0.4); }
+
 table {
     border: 1px solid #b5e853;
     border-collapse: collapse;
@@ -159,7 +161,7 @@ footer {
 .project-preview ul, .post-preview ul { padding: 0; }
 .project-preview li, .post-preview li { position: relative; display: block; margin: 2em 0; }
 .project-preview a, .post-preview a { text-decoration: none; color: #eaeaea; text-shadow: none; }
-.project-preview img, .post-preview img { position: absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:100%; object-fit:cover; }
+.project-preview img, .post-preview img { position: absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:100%; height: 320px; object-fit:cover; }
 .project-preview h2, .post-preview  h2 { margin: 0; }
 .project-preview h5, .post-preview h5 { position: absolute; right: 0.6em; bottom: 0; }
 .project-preview .left { flex-shrink: 0; position: relative; overflow:hidden; width:30%; height:200px; 
