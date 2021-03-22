@@ -1,7 +1,7 @@
 ---
 title:  "Глобальные сигналы в C#"
 repository: global-signals
-preview: /assets/images/posts/2021-03-17-global-signals-cs/signal_preview.gif
+preview: /assets/images/posts/2021-03-17-global-signals-cs/signal-preview.gif
 date:   2021-03-17 10:00:00 +0300
 categories: ru cases
 tags: [c#, unity3d]
