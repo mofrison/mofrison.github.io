@@ -5,7 +5,7 @@ preview: /assets/images/projects/graph-of-function/graph-3.jpg
 excerpt: Программа принимает данные от пользователя, вычисляет значения формулы Y(X), выводит значения в виде таблицы и строит график...
 date: 2017-01-26
 categories: ru projects
-tags: [c++, studies]
+tags: [C++, studies]
 layout: project
 lang: Ru
 ---

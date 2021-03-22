@@ -9,13 +9,15 @@ layout: default
 {% assign projects = site.projects | where: "lang", page.lang | where: "tags", page.slug %}
 {% assign posts = site.tags[page.slug] | where: "lang", page.lang %}
 
-{% if posts %}
-    {% assign items = projects | concat: posts | uniq | sort: 'date' | reverse %}
-    <ul>
-        {% for item in items %}
-            <li>
-                {{ item.date | date: "%d.%m.%Y" }}: <a href="{{ item.url }}">{{ item.title }}</a>
-            </li>
-        {% endfor %}
-    </ul>
+{% if posts and projects %}{% assign items = projects | concat: posts | uniq | sort: 'date' | reverse %}
+{% elsif posts %}{% assign items = posts | uniq | sort: 'date' | reverse %}
+{% elsif projects %}{% assign items = projects | uniq | sort: 'date' | reverse %}
 {% endif %}
+
+<ul>
+    {% for item in items %}
+        <li>
+            {{ item.date | date: "%d.%m.%Y" }}: <a href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+    {% endfor %}
+</ul>

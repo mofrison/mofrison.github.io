@@ -5,7 +5,7 @@ preview: ./assets/images/projects/move-the-horse/Greeting.jpg
 excerpt: This training program allows you to simulate the movement of a chess piece «Horse» on a field of size 8x8. An additional condition is that the «Horse» must visit each cell only once...
 date: 14-06-2016
 categories: projects
-tags: [c++, studies]
+tags: [C++, studies]
 layout: project
 lang: En
 ---

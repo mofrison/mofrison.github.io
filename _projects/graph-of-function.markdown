@@ -5,7 +5,7 @@ preview: /assets/images/projects/graph-of-function/graph-3.jpg
 excerpt: The program accepts data from the user, calculates the values of the formula Y(X), outputs the values as a table and builds a graph...
 date: 2017-01-26
 categories: projects
-tags: [c++, studies]
+tags: [C++, studies]
 layout: project
 lang: En
 ---

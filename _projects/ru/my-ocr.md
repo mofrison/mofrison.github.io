@@ -5,7 +5,7 @@ preview: ./assets/images/projects/my-ocr/segmentation.jpg
 excerpt: Это программа позволяет распознавать текстовые символы, находящиеся на растровом изображении. Цель данной работы - изучения машинного зрения на основе фильтров теории активного восприятия изображения...
 date: 22-05-2017
 categories: ru projects
-tags: [c++, studies]
+tags: [C++, studies]
 layout: project
 lang: Ru
 
