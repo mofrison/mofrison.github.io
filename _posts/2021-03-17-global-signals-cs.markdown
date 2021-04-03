@@ -11,7 +11,7 @@ layout: post
 
 This time I will share with you my implementation of the interaction between different parts of the application, through the transmission and processing of signals. This rather simple method solved for me the problem of transferring data from one object to another when using multiscenes in **Unity3d**.
 
-## Background
+## Prolog
 As mentioned above, when creating an application in Unity3d, I came across the fact that it is necessary to transfer data from one object to another.
 Moreover, this was complicated by the use of multitsen. My project involves creating a lot of scenes and I really did not want to manually implement dependencies.
 Methods like `FindObjectsOfType` were also not suitable for me, as they take up too many resources to search for objects. I wanted to simplify data transfer between scene objects as much as possible without compromising performance.
