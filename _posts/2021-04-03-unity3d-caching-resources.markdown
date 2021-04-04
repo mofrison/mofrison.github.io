@@ -4,20 +4,12 @@ repository: Unity3d-download-resources
 preview: /assets/images/posts/2021-04-03-unity3d-caching-resources/preview.jpg
 date:   2021-04-03 10:00:00 +0300
 categories: cases
-tags: [C#, unity3d]
+tags: [C#, Unity3d]
 lang: En
 layout: post
 ---
 
 In this article, we are talking about saving data to the device's permanent memory and organizing access to it. It is intended to prepare you, dear reader, for a more complex article about downloading resources from the network. In fact, this is its introductory part, which was allocated in a separate post, because the topic turned out to be very voluminous.
-
-## Prologue
-While working on the VR project **Panoramic View**, I set myself the task of making downloading content for this application as flexible and convenient as possible. The main concept was the ability to add new locations with panoramic views without updating the entire app. In **Unity3d** there is a class `UnityWebRequest` that helps to load various types of resources from the Internet.
-
-In addition to images, sounds, and videos, I needed to load and position interactive elements to make transitions between locations. This could be done by using procedural generation, loading a json file with the coordinates of the transitions and the identifier of the new location. But why make a new data structure when all this is in the scenes in the most visual form. So I started looking for the possibility of loading scenes, and as it turned out, there was such a possibility. To do this, use [**AssetBundles**](https://docs.unity3d.com/ru/current/Manual/AssetBundlesIntro.html), they can be used to load many different entities into **Unity3d**, including entire scenes.
-
-The developers provided the ability to download all the resources via **AssetBundle**, but this turned out to be inefficient because it took a considerable time to unpack even small images. Therefore, to load media resources, it turned out to be optimal to use specialized methods provided by the `UnityWebRequest` class.
-The article [_Working with external resources in Unity3D_](https://habr.com/ru/post/433366/) helped me a lot to organize the loading of resources from external sources. Its author [Ichimitsu](http://haber.com/ru/users/Ishimitsu/) told me how to make this process as fast as possible, for which I am very grateful to him!
 
 ## Why store resources in the device memory
 I think many developers primarily of mobile applications have encountered the fact that resources do not fit in the application installation files. This is especially true for those who use photorealistic content(360 panoramas). A small help in this is the use of extension files, but they are also limited in size. In addition, downloading additional content requires updating the app through the store.
