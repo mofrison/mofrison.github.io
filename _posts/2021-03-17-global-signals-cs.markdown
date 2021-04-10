@@ -189,4 +189,9 @@ I understand that this method may seem unsafe to many people because of a possib
 
 To protect yourself when using signals, I recommend that you subscribe to them only objects that are active before the program exits, or whose lifetime can be accurately determined, and at the end of it unsubscribe from the signal. In the case of objects in **Unity3d**, you can(and should) unsubscribe from the signal in the `onDestroy()` method called when the object is removed from the scene. In the case of standard C#, you should not try to unsubscribe in the destructor or in the `Finalize()` method since it is called by the mustor collector only after removing all references to the object, and as you understand, the reference to the object's method will be stored in a static variable until the program ends.
 
+I have created a separate repository with [examples](https://github.com/{{ site.github.owner_name }}/examples-global-signals) so that you can test them.
+You can also use global signals in your project by adding [this repository](https://github.com/{{ site.github.owner_name }}/{{ page.repository }}) as a [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules):
+
+	git submodule add https://github.com/mofrison/global-signals
+
 In any case, it is up to you to use this method or not. Thanks for your attention :)

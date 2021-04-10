@@ -1,6 +1,6 @@
 ---
 title:  "Unity3d: Хранение данных на устройстве"
-repository: Unity3d-download-resources
+repository: Unity3d-Network
 preview: /assets/images/posts/2021-04-03-unity3d-caching-resources/preview.jpg
 date:   2021-04-03 10:00:00 +0300
 categories: ru cases
@@ -109,3 +109,10 @@ public static string ConvertToCachedPath(this string url)
 ## Вместо заключения
 Как можно заметить предоставленный код не отличается какой либо сложностью и при этом выполняет важную функцию сохранения данных на устройстве.
 В следующем посте мы воспользуемся им для кэширования ресурсов загружаемых из сети интернет.
+
+Я создал отдельный репозиторий с [примерами](https://github.com/{{ site.github.owner_name }}/Unity3d-download-resources), чтобы вы могли их протестировать.
+Вы также можете использовать Кэширование данных на устройстве_ for **Unity3d** в своем проекте, добавив [этот репозиторий](https://github.com/{{ site.github.owner_name }}/{{ page.repository }}) как [подмодуль](https://git-scm.com/book/en/v2/Git-Tools-Submodules):
+
+    git submodule add https://github.com/mofrison/Unity3d-Network
+
+Спасибо что дочитали до конца, надеюсь это Вам пригодится :)

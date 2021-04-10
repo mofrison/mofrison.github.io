@@ -1,6 +1,6 @@
 ---
 title:  "Unity3d: Saving data on the device"
-repository: Unity3d-download-resources
+repository: Unity3d-Network
 preview: /assets/images/posts/2021-04-03-unity3d-caching-resources/preview.jpg
 date:   2021-04-03 10:00:00 +0300
 categories: cases
@@ -109,3 +109,10 @@ It is important to note that the method does not guarantee that the file will be
 ## Instead of a conclusion
 As you can see, the provided code does not differ in any complexity and at the same time performs an important function of saving data on the device.
 In the next post, we will use it to cache resources downloaded from the Internet.
+
+I have created a separate repository with [examples](https://github.com/{{ site.github.owner_name }}/Unity3d-download-resources) so that you can test them.
+You can also use _Saving data on the device_ for **Unity3d** in your project by adding [this repository](https://github.com/{{ site.github.owner_name }}/{{ page.repository }}) as a [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules):
+
+	git submodule add https://github.com/mofrison/Unity3d-Network
+
+Thank you for reading to the end, I hope this will be useful to you :)

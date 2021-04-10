@@ -1,6 +1,6 @@
 ---
 title:  "Unity3d: Resources from the Network"
-repository: global-signals
+repository: Unity3d-Network
 preview: /assets/images/posts/2021-04-04-unity3d-download-resources/preview.jpg
 date:   2021-04-04 10:00:00 +0300
 categories: cases
@@ -407,5 +407,10 @@ private static async Task<string> GetCachedPath(this string url)
 }
 ```
 When the method is called, the url is converted to the path to the file, and if it is located there, its size is compared with the size of the file in the external storage. If the dimensions match, the method returns the path to the file as a string, if not, it returns the utl address.
+
+I have created a separate repository with [examples](https://github.com/{{ site.github.owner_name }}/Unity3d-download-resources) so that you can test them.
+You can also use _Saving data on the device_ for **Unity3d** in your project by adding [this repository](https://github.com/{{ site.github.owner_name }}/{{ page.repository }}) as a [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules):
+
+	git submodule add https://github.com/mofrison/Unity3d-Network
 
 Thank you for reading to the end, I hope this will be useful to you :)

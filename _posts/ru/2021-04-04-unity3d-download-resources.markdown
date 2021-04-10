@@ -1,6 +1,6 @@
 ---
 title:  "Unity3d: Загрузка ресурсов из Сети"
-repository: global-signals
+repository: Unity3d-Network
 preview: /assets/images/posts/2021-04-04-unity3d-download-resources/preview.jpg
 date:   2021-04-04 10:00:00 +0300
 categories: ru cases
@@ -406,5 +406,10 @@ private static async Task<string> GetCachedPath(this string url)
 }
 ```
 При вызове метода url-адрес конвертируется в путь к файлу и если он там находится, то его размер сравнивается с размером файла во внешнем хранилище. Если размеры совпадают то метод возвращает путь к файлу в виде строки, если нет - возвращает utl-адрес.
+
+Я создал отдельный репозиторий с [примерами](https://github.com/{{ site.github.owner_name }}/Unity3d-download-resources), чтобы вы могли их протестировать.
+Вы также можете использовать Кэширование данных на устройстве_ for **Unity3d** в своем проекте, добавив [этот репозиторий](https://github.com/{{ site.github.owner_name }}/{{ page.repository }}) как [подмодуль](https://git-scm.com/book/en/v2/Git-Tools-Submodules):
+
+    git submodule add https://github.com/mofrison/Unity3d-Network
 
 Спасибо что дочитали до конца, надеюсь это Вам пригодится :)
