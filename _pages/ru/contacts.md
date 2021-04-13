@@ -6,8 +6,7 @@ position: 3
 lang: Ru
 ---
 
-## Добро пожаловать
-
-_yay_
-
-[Назад](./)
+## {{page.title}}
+Если у Вас возникли вопросы, пожелания, предложения или Вы нашли ошибки у меня на сайте, можите связаться со мной удобным для Вас способом:
+* [facebook](https://facebook.com/mofrison.live)
+* [mofrison.dev@gmail.com](mailto:mofrison.dev@gmail.com)
