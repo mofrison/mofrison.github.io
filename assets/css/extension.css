@@ -228,7 +228,7 @@ footer {
     color: #63c0f5;
 }
 
-img#preview { margin: 2em 0 1em 0; width:100%; height: 300px; object-fit:cover; }
+img#preview { margin: 2em 0 1em 0; width:100%; height: 280px; object-fit:cover; }
 
 #social a {
     border-radius: 50%;
